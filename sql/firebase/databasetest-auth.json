@@ -1,0 +1,9 @@
+{
+    "apiKey": "AIzaSyDPpxH1Q2pkhZzo3YotMy4zYZrVpD3cbYI",
+    "authDomain": "database-test-deee5.firebaseapp.com",
+    "projectId": "database-test-deee5",
+    "storageBucket": "database-test-deee5.appspot.com",
+    "messagingSenderId": "765660722821",
+    "appId": "1:765660722821:web:4f954dc6755220d0819bec",
+    "measurementId": "${config.measurementId}"
+}

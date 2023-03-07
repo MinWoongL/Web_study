@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/new_main.css">
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+
+    <script type = "text/javascript">
+        function ChangeImg(){
+            document.getElementById("imgTim").src = "../static/image/Tim_BernersLee.jpg";
+        }
+
+        function ChangeSignupImg(){
+            document.getElementById("logo").src = "../static/image/signup2.png";
+        }
+
+        function ChangeSignupImg2(img_btn){
+
+            var src_link;
+            console.log(img_btn.src)
+
+            if (img_btn.src == "http://localhost:3300/static/image/signup.png"){
+                src_link = "../static/image/signup2.png"
+            }
+            else if (img_btn.src == "http://localhost:3300/static/image/signup2.png"){
+                src_link = "../static/image/signup.png"
+            }
+
+            document.getElementById("logo").src = src_link;
+            
+        }
+    </script>
+
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}
+    {%endblock%}
+
+</body>
+</html>

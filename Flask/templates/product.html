@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+    {% block title %}{{title}}{% endblock %}
+    {% block content %}
+    <h3>제품정보조회</h3>
+    <table>
+        <thead>
+            <tr>
+                <td>상품번호</td>
+                <td>상품명</td>
+                <td>가격</td>
+            </tr>
+        </thead>
+        <tbody>
+            <hr>
+            {% for item in rows %}
+            <tr>
+               <td><a href="/product/{{item.goodsno}}">{{item.goodsno}}</a></td>
+               <td>{{item.name}}</td> 
+               <td>{{item.org_price}}</td> 
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

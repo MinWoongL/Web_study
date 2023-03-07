@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href = "../static/css/style.css" rel="stylesheet" type="text/css">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 폼</title>
+</head>
+
+<body id>
+    <h1>{{ template }}</h1>
+    <h2 id = "login_1">로그인 폼1</h2>
+    <hr>
+    <form name = "form" action = "/login" method = "get">
+        <p>사용자 ID : <input name = "userid" type="text" size="15" value=""></p>
+        <p>비밀번호  : <input name = "password" type="password" size="15" value=""></p>>
+        <input type="submit" value="완료">
+    </form>
+    <div class = "login_1_b">
+        <h2>로그인 폼2</h2>
+        <hr>
+        <form name = "form" action = "/login" method = "get">
+        <p>사용자 ID : <input name = "userid" type="text" size="15" value=""></p>
+        <p>비밀번호  : <input name = "password" type="password" size="15" value=""></p>>
+        <input type="submit" value="완료">
+        </form>
+    </div>
+    <div class = "login_3_b">
+        <h2 id = "login_3">로그인 폼3</h2>
+        <hr>
+        <form name = "form" action = "/login" method = "get">
+        <p>사용자 ID : <input name = "userid" type="text" size="15" value=""></p>
+        <p>비밀번호  : <input name = "password" type="password" size="15" value=""></p>>
+        <input type="submit" value="완료">
+        </form>
+    </div>
+    
+</body>
+
+</html>

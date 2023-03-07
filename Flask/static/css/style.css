@@ -1,0 +1,18 @@
+h2 {color : rgb(162, 0, 255);}
+body {background-color: mistyrose;}
+
+#second {background-color: blueviolet;}
+
+#login_1 {color: rgb(0, 255, 55)}
+#login_3 {color: rgb(89, 18, 202)}
+
+.login_1_b {background-color: rgb(211, 169, 107);}
+.login_3_b {background-color: rgb(247, 234, 215);}
+
+#ul_style {color: rgb(66, 141, 15);}
+#ol_style {color: rgb(119, 79, 15);}
+
+ul span {color : white}
+ol span {color : white}
+
+li:hover {background-color: rgb(207, 19, 19);}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .white{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: -2.75px;
+            border: 1px solid black;
+        }
+        .black {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            display: inline-block;
+            border: 1px solid black;
+            margin: -2.75px;
+            z-index: 1;
+        }
+        img {
+            position: absolute;
+            width: 100px;
+            z-index: 3;
+        }
+        .king {
+            position: absolute;
+            left: 413px;
+            width: 100px;
+            top: 413px;
+            animation: king 3s infinite alternate;
+        }
+        .queen {
+            position: absolute;
+            left: 315px;
+            width: 95px;
+            top: 713px;
+            animation: queen 3s infinite alternate;
+
+        }
+        .rook {
+            position: absolute;
+            left: 720px;
+            width: 95px;
+            top: 713px;
+            animation: rook 3s infinite alternate;
+        }
+        .pawn {
+            position: absolute;
+            left: 10px;
+            width: 95px;
+            top: 413px;
+            animation: pawn 3s infinite 1s alternate;
+        }
+        @keyframes king{
+            from{
+                transform: translate(0px, 300px);
+            }
+            to{
+                transform: translate(210px, 300px);
+            }
+        }
+        @keyframes queen{
+            from{
+                transform: translate(0px, 0px);
+
+            }
+            to{
+                transform: translate(-305px, -305px);
+            }
+        }
+        @keyframes rook {
+            from{
+                transform: translate(0, 0px);
+            }
+            to{
+                transform: translate(-200px, 0px);
+            }
+            
+        }
+        @keyframes pawn {
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <!--
+        div>((div>(div.white+div.black)*4)+(div>(div.black+div.white)*4))*4
+    -->
+    <div class>
+        <img src="white_king.png" alt="" class="king">
+        <img src="white_queen.png" alt="" class="queen">
+        <img src="black_pawn.png" alt="" class="pawn">
+        <img src="white_rook.png" alt="" class="rook">
+        <div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+        <div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+        </div>
+        <div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+        <div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+        </div>
+        <div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+        <div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+        </div>
+        <div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+        </div>
+        <div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+        </div>
+    </div>
+
+</body>
+</html>

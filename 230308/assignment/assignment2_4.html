@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div p {
+        position: relative;
+        margin-left: 50px;
+        color: blue;
+    }
+    div > p {
+        margin-left: 0px;
+        color: crimson;
+    }
+  </style>
+</head>
+<body>
+    <div>
+        <p>
+            자식
+        </p>
+        <span>
+            <p>
+                손자
+            </p>
+        </span>
+        <p>
+            자식
+        </p>
+    </div>
+  
+</body>
+</html>
+<!-- 
+    A: 자손관계(A B)의 경우에는 A 에 포함된 B 모두에게 해당이 된다.
+       자식관계(A > B)의 경우에는 A의 직계 자식 요소인 B를 바꿔준다. 
+ -->

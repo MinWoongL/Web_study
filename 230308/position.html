@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 기본 */
+    .box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #000;
+      color: black;
+      background-color: #9775fa;
+      text-align: center;
+    }
+
+    /* static */
+    /* top, left 가 무시된다. */
+    .static {
+      background-color: green;
+      top: 100px;
+      left: 100px;
+    }
+
+    /* relative */
+    /* 내가 가야할 위치로 부터 position 설정 */
+    .relative {
+      position: relative;
+      background-color: red;
+      top: 100px;
+      left: 100px;
+    }
+
+    /* absolute */
+    /* 부모요소의 시작점 기준으로 배치 */
+    .absolute {
+      position: absolute;
+      background-color: blue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">static</div>
+  <div class="box static">static</div>
+  <div class="box relative">relative</div>
+  <div class="box relative absolute">absolute</div>
+  <!-- 아무 일 없는 것처럼 보임 -->
+</body>
+</html>

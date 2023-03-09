@@ -57,7 +57,7 @@ input{ /*<br>남발을 줄이기위해 사용*/
   outline-color: gray;
 }
 
-.loginBtn{ /*<br>남발을 줄이기위해 사용했다*/
+.loginBtn{ /*<br>남발을 줄이기위해 사용*/
   display: block;
   width: 250px;
   height: 30px;
@@ -100,8 +100,8 @@ input:nth-child(2){
   font-size: small;
   text-align: center;
 }
-.findpw a{
-  color: rgb(68, 68, 116);
+.findpw p{
+  color: rgb(97, 97, 216);
 }
 
 .account{
@@ -115,7 +115,7 @@ input:nth-child(2){
   justify-content: center;
   padding-top: 1.5rem;
 }
-.account ul a{
+.account ul p{
   font-weight: bold;
   color: rgb(43, 152, 247);
 }

@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    background-color: white;
+}
+
+.main_logo {
+    border: 1px solid white;
+}
+
+html {
+    height: 100%;
+  }
+body {
+    background-color: white;
+    height: 100%;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container {
+    background-color: white;
+    width: 350px;
+    height: 400px;
+    margin-left: 40px;
+    border: 1px solid lightgray;
+}
+.logo-text {
+    font-family: "Lobster", cursive;
+    font-size: 55px;
+    margin-top: 50px;
+}
+.input-wrapper {
+    margin-top: 60px;
+}
+.login-wrapper {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 5px;
+}
+.login-input {
+    font-size: 14px;
+    width: 330px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.035);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.login-button {
+    width: 100%;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+    background-color: rgba(0, 162, 255, 0.3);
+    border: none;
+    border-radius: 5px;
+    padding: 9px;
+}
+.button-wrapper {
+    border: none;
+    margin: 15px 40px;
+}
+.findpass {
+    margin-top: 140px;
+    font-size: 13px;
+    color: rgb(86, 96, 235);
+}

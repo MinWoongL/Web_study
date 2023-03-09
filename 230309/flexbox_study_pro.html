@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/flexbox_study_pro.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>기본 박스</h1>
+  <div class="basic-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <h1>flex</h1>
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <h1>flex-direction - row(default)</h1>
+  <div class="flex-container flex-row">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <h1>flex-direction - row-reverse</h1>
+  <div class="flex-container flex-row-reverse">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <h1>flex-direction - column</h1>
+  <div class="flex-container flex-column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <h1>flex-direction - column-reverse</h1>
+  <div class="flex-container flex-column-reverse">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <h1>justify-content - flex-start</h1>
+  <div class="flex-container flex-start">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <h1>justify-content - flex-center</h1>
+  <div class="flex-container flex-center">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <h1>justify-content - flex-end</h1>
+  <div class="flex-container flex-end">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <h1>justify-content - space-between</h1>
+  <div class="flex-container flex-tmp1">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <h1>justify-content - space-around</h1>
+  <div class="flex-container flex-tmp2">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <h1>justify-content - space-evenly</h1>
+  <div class="flex-container flex-tmp3">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+
+  <h1>flex-wrap: nowrap(default)</h1>
+  <div class="flex-container flex-tmp4" style="width: 100px;"> 
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+  </div>
+
+  <h1>flex-wrap: wrap</h1>
+  <div class="flex-container flex-tmp5" style="width: 300px;"> 
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+  </div>
+
+
+  <h1>flex-wrap: wrap-reverse</h1>
+  <div class="flex-container flex-tmp6" style="width: 300px;"> 
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+  </div>
+
+  <h1>확대 - flex-grow</h1>
+  <h1>모든 아이템 크기를 동일하게</h1>
+  <div class="flex-container"> 
+    <div class="flex-item grow">1</div>
+    <div class="flex-item grow">2</div>
+    <div class="flex-item grow">3</div>
+  </div>
+
+  <h1>확대 - flex-grow</h1>
+  <h1>특정 비율로 확대</h1>
+  <div class="flex-container"> 
+    <div class="flex-item grow1">1</div>
+    <div class="flex-item grow2">2</div>
+    <div class="flex-item grow3">3</div>
+  </div>
+
+  <!-- 설명부터 오후에 -->
+  <h1>축소1 - flex-shrink (축소 안함)</h1>
+  <div class="flex-container" style="width: 300px;"> 
+    <div class="flex-item shrink" style="width: 100px;">1</div>
+    <div class="flex-item shrink" style="width: 100px;">2</div>
+    <div class="flex-item shrink" style="width: 100px;">3</div>
+  </div>
+
+  <h1>축소2 - flex-shrink (동일한 크기로)</h1>
+  <div class="flex-container" style="width: 300px;"> 
+    <div class="flex-item shrink1" style="width: 100px;">1</div>
+    <div class="flex-item shrink1" style="width: 100px;">2</div>
+    <div class="flex-item shrink1" style="width: 100px;">3</div>
+  </div>
+
+  <h1>축소3 - flex-shrink (특정 비율로 축소)</h1>
+  <div class="flex-container" style="width: 400px;"> 
+    <div class="flex-item shrink2" style="width: 200px;">1</div>
+    <div class="flex-item shrink3" style="width: 200px;">2</div>
+    <div class="flex-item shrink4" style="width: 200px;">3</div>
+  </div>
+
+  <h1>특이한 경우 - flex-basis</h1>
+  <div class="flex-container"> 
+    <div class="flex-item flex-basis" style="width: 30px;">1</div>
+    <div class="flex-item flex-basis" style="width: 100px;">2</div>
+    <div class="flex-item flex-basis" style="width: 400px;">3</div>
+  </div>
+
+  <h1>순서 변경</h1>
+  <div class="flex-container">
+    <div class="flex-item order1">1</div>
+    <div class="flex-item order2">2</div>
+    <div class="flex-item order3">3번이 앞에</div>
+  </div>
+
+  <h1>가장 많이 사용되는 예제 - 가운데 정렬</h1>
+  <div class="flex-container2">
+    <div class="flex-item2">1</div>
+  </div>
+
+  <h1>가장 많이 사용되는 예제</h1>
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item margin-right">2</div>
+    <div class="flex-item">우측 배치1</div>
+    <div class="flex-item">우측 배치2</div>
+    <div class="flex-item">우측 배치3</div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br>
+</body>
+</html>

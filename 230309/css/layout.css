@@ -1,0 +1,28 @@
+.header {
+    height: 100px;
+    background-color: goldenrod;
+}
+
+.section-left {
+    height: 400px;
+    background-color: bisque;
+    width: 30%;
+}
+
+.section-right{
+    height: 400px;
+    background-color: aquamarine;
+    width: 70%;
+
+}
+
+.footer {
+    height: 500px;
+    background-color: beige;
+    /* float을 끝내고 다시 normal flow를 따라주도록 해줌 */
+    clear: both;
+}
+
+.left {
+    float:left;
+}

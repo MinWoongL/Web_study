@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/flex_study.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 기본박스 </h1>
+    <div class="basic_container">
+        <div class="flex_item">1</div>
+        <div class="flex_item">2</div>
+        <div class="flex_item">3</div>
+    </div>
+    <h1> flex </h1>
+    <div class="flex_container">
+        <div class="flex_item">1</div>
+        <div class="flex_item">2</div>
+        <div class="flex_item">3</div>
+    </div>
+    <h1> flex-direction </h1>
+    <div class="flex_container flex_direction">
+        <div class="flex_item">1</div>
+        <div class="flex_item">2</div>
+        <div class="flex_item">3</div>
+    </div>
+    <h1> justify_content1 </h1>
+    <div class="flex_container justify_space-between">
+        <div class="flex_item">1</div>
+        <div class="flex_item">2</div>
+        <div class="flex_item">3</div>
+    </div>
+    <h1> justify_content2 </h1>
+    <div class="flex_container justify_space-around">
+        <div class="flex_item">1</div>
+        <div class="flex_item">2</div>
+        <div class="flex_item">3</div>
+    </div>
+    <h1> justify_content3 </h1>
+    <div class="flex_container justify_space-evenly">
+        <div class="flex_item">1</div>
+        <div class="flex_item">2</div>
+        <div class="flex_item">3</div>
+    </div>
+    <h1> justify_content4 </h1>
+    <div class="flex_container flex_content4">
+        <div class="flex_item">1</div>
+        <div class="flex_item">2</div>
+        <div class="flex_item">3</div>
+        <div class="flex_item">4</div>
+        <div class="flex_item">5</div>
+    </div>
+    <h1> 줄바꿈을 하지 않는 것 </h1>
+    <div class="flex_container flex_content5">
+        <div class="flex_item">1</div>
+        <div class="flex_item">2</div>
+        <div class="flex_item">3</div>
+        <div class="flex_item">4</div>
+        <div class="flex_item">5</div>
+    </div>
+    <h1> 축소1 - flex-shrink (축소 안함) </h1>
+    <div class="flex_container" style="width: 300px">
+        <div class="flex_item shrink" style="width: 100px">1</div>
+        <div class="flex_item shrink" style="width: 100px">2</div>
+        <div class="flex_item shrink" style="width: 100px">3</div>
+        <div class="flex_item shrink" style="width: 100px">4</div>
+        <div class="flex_item shrink" style="width: 100px">5</div>
+    </div>
+    <h1> 축소2 - flex-shrink (동일한 크기로) </h1>
+    <div class="flex_container" style="width: 400px">
+        <div class="flex_item shrink1" style="width: 100px">1</div>
+        <div class="flex_item shrink1" style="width: 100px">2</div>
+        <div class="flex_item shrink1" style="width: 100px">3</div>
+        <div class="flex_item shrink1" style="width: 100px">4</div>
+        <div class="flex_item shrink1" style="width: 100px">5</div>
+    </div>
+    <h1> 축소3 - flex-shrink (특정 비율로 축소) </h1>
+    <div class="flex_container">
+        <div class="flex_item shrink2" style="width: 100px">1</div>
+        <div class="flex_item shrink1" style="width: 100px">2</div>
+        <div class="flex_item shrink2" style="width: 100px">3</div>
+        <div class="flex_item shrink1" style="width: 100px">4</div>
+        <div class="flex_item shrink2" style="width: 100px">5</div>
+    </div>
+    <h1> 순서변경 </h1>
+    <div class="flex_container">
+        <div class="flex_item order1">1</div>
+        <div class="flex_item order2">2</div>
+        <div class="flex_item order3">3</div>
+
+    </div>
+</body>
+</html>

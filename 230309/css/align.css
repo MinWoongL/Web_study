@@ -1,0 +1,46 @@
+.container {
+    background-color: cadetblue;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item{
+    background-color: lightsalmon;
+    border: 1px solid black;
+
+    font-size: 50px;
+    margin-right: 5px;
+    
+}
+
+.small{
+    font-size: 50px;
+}
+
+.big {
+    font-size: 50px;
+}
+
+.order1 {
+    order: 1
+}
+
+.order2 {
+    order: 2
+}
+
+.order3 {
+    order: 3
+}
+
+.grow-1 {
+    flex-grow : 1
+}
+
+.grow-2 {
+    flex-grow : 3
+}

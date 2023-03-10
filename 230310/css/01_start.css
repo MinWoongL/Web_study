@@ -1,0 +1,28 @@
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: aqua;
+
+    border-radius: 50%;
+}
+
+.red {
+    background-color: red;
+}
+
+.gold {
+    background-color: goldenrod;
+}
+
+.green {
+    background-color: green;
+}
+.sm {
+    width: 50px;
+    height: 50px;
+}
+.lg {
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,46 @@
+.container {
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.item {
+
+}
+.box1 {
+    width: 350px;
+    height: 400px;
+    border: 1px solid #aaaaaa;
+}
+.box2 {
+    margin-top: 10px;
+    width: 350px;
+    height: 70px;
+    border: 1px solid #aaaaaa;
+}
+.box3 {
+    width: 350px;
+    height: 70px;
+}
+.small2 {
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+.log {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+#login {
+    width: 100%;
+    background-color: skyblue;
+    border-color: transparent;
+    color: white;
+}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block base %}
+
+    <h1>게시판 목록</h1>
+    <hr>
+    {% for article in articles %}
+        <p>번호 : {{article.pk}}</p>
+        <p>제목 : {{article.title}}</p>
+        <p>내용 : {{article.content|truncatechars:10}}</p>
+        <hr>
+    {% empty %}
+        <p>게시글이 없음</p>
+    {% endfor %}
+
+
+{% endblock base %}

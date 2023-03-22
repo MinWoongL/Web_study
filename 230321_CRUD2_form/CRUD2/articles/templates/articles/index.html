@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block base %}
+
+<div class="container">
+    <h1>게시판 목록</h1>
+
+    {% for a in articles %}
+        <a href="{% url 'articles:detail' a.pk%}">글번호 : {{a.pk}}</a>
+        <p>글제목 : {{a.title}} </p>
+        <p>글내용 : {{a.content}} </p>
+        <p>글작성 : {{a.author}}</p>
+        <p>글번호 : {{a.pk}} </p>
+
+        <a href="{% url 'articles:update' a.pk %}"><button>수정</button></a>
+
+        <form action="{% url 'articles:detail' a.pk %}" method = "POST">
+            {% csrf_token %}
+            <input type="submit" value="삭제하기">
+
+        </form>
+        <hr>
+    {% empty %}
+        <p>내용이 없습니다</p>
+    
+    {% endfor %}
+    
+</div>
+
+{% endblock base %}

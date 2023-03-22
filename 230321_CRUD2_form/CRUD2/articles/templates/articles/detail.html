@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block base %}
+
+    <h3>{{article.pk}} 번째 내용</h3>
+    <hr>
+    <p>제목: {{article.title}}</p>
+    <p>내용: {{article.content}}</p>
+    <p>작성 시각: {{article.created_at}}</p>
+    <p>수정 시각: {{article.updated_at}}</p>
+
+    {% if article.image.url %}
+        <img src="{{article.image.url}}" alt="">
+    {% else %}
+        <p>이미지 없음</p>
+    {% endif %}
+    
+    <hr>
+    <a href="{% url 'articles:index' %}">[back]</a>
+
+    
+
+{% endblock base %}
+
+

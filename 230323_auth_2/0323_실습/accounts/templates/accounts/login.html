@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>LOGIN</h1>
+{% comment %} action을 비워두면 자기 자신에게 요청을 보내는것 {% endcomment %}
+<form action= "" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="로그인">
+    {% comment %} POST.get.('next') 로 받고싶어서 name='next' 로 지정해준 것 {% endcomment %}
+    {% comment %} hidden으로 줘야 숨겨서 보낼 수 있음 {% endcomment %}
+    {% comment %} <input type="hidden" name="next" value="{{next}}"> {% endcomment %}
+</form>
+
+
+
+{% endblock content %}

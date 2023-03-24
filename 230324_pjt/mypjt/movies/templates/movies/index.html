@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block base %}
+    <h1>INDEX</h1>
+    {% for movie in movies %}
+    <p>Title : {{movie.title}}</p>
+    <p>Score : {{movie.score}}</p>
+    <a href="{% url 'movies:detail' movie.pk%}">Detail</a>
+    <br>
+
+    <a href="{% url 'movies:update' movie.pk %}"><button>update</button></a>
+
+    <form action="{% url 'movies:delete' movie.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="delete">
+    </form>
+    
+
+    <hr>
+    {% empty %}
+    <p>No Movie Data</p>
+
+    {% endfor %}
+
+
+
+
+{% endblock base %}

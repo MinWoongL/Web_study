@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block base %}
+    <h1>DETAIL</h1>
+    <hr>
+    <p>Title : {{movie.title}}</p>
+    <p>Release Dates: {{movie.release_date}}</p>
+    <p>Genre : {{movie.genre}}</p>
+    <p>Score : {{movie.score}}</p>
+    <p>Poster URL : {{movie.poster_url}}</p>
+
+    {% if movie.actor_image %}
+        <img src="{{movie.actor_image.url}}" alt="sample_img">
+    {% else %}
+        <p>이미지 없음</p>
+    {% endif %}
+    <p>{{movie.description}}</p>
+    
+
+
+
+
+
+
+{% endblock base %}

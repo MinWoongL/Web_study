@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block base %}
+    <h1>Movie Data</h1>
+    {% for movie in movies %}
+    <p><a href="{% url 'movies:detail' movie.pk %}">글 제목 : {{movie.title}}</a></p>
+    <p>Description: {{movie.description}}</p>
+    
+    {% endfor %}
+
+{% endblock base %}
+
+

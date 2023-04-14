@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block base %}
+    <h1>DETAIL</h1>
+    <hr>
+    <p>Title : {{movie.title}}</p>
+    <p>Description: {{movie.description}}</p>
+
+    <hr>
+    {% if user == movie.user %}
+    <a href="{% url 'movies:update' movie.pk %}">Update</a>
+    <form action="{% url 'movies:delete' movie.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+    {% endif %}
+    <a href="{% url 'movies:index' %}">글 목록</a>
+
+    <hr>
+    <h4>Comment</h4>
+    {% if comments %}
+        <p><b>{{comments.count}}개의 댓글</b></p>
+    {% endif %}
+
+    <ul>
+        {% for comment in comments %}
+        <li>
+            {{ comment.user }} - {{ comment.content }}
+            {% if user == comment.user %}
+                <form action="{% url 'movies:comments_delete' movie.pk comment.pk%}" method="POST" class="d-inline">
+                    {% csrf_token %}
+                    <input type="submit" value="삭제">
+                </form>
+            {% endif %}
+        </li>
+        {% empty %}
+            <p>No comment</p>
+        {% endfor %}
+    </ul>
+    <hr>
+    {% if request.user.is_authenticated %}
+        <form action="{% url 'movies:comments_create' movie.pk %}" method="POST">
+            {% csrf_token %}
+            {{ comment_form }}
+            <input type="submit">
+        </form>
+    {% else %}
+        <a href="{% url 'accounts:login' %}"> 로그인 필요 </a>
+    {% endif %}
+{% endblock base %}

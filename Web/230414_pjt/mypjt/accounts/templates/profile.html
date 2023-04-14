@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block base %}
+    <h1>{{user_data.username}}의 페이지</h1>
+    <hr>
+    <div class="badge bg-info">
+        <div>
+            <h2>Following : {{ user_data.followings.count }} | Followers : {{ user_data.followers.all|length }}</h2>
+        </div>
+        {% if request.user != user_data %}
+        <div>
+            <form action="{% url 'accounts:follow' user_data.pk %}" method="POST">
+                {% csrf_token %}
+                {% if request.user in user_data.followers.all %}
+                    <input type="submit" value="Unfollow">
+                {% else %}
+                    <input type="submit" value="Follow">
+                {% endif %}
+            </form>
+        </div>
+        {% endif %}
+    </div>
+    <hr>
+
+    <h2>작성한 게시글</h2>
+    {% for movie in user_data.movie_users.all %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">제목: {{ movie.title }}</h5>
+                <p class="cared-text">내용: {{ movie.description }}</p>
+                <a href="{% url 'movies:detail' movie.pk %}" class="btn btn-primary"> 자세히 보기 </a>
+            </div>
+        </div>
+    {% endfor %}
+    <hr>
+
+    <h2>{{ user_data.username }}'s 댓글</h2>
+    {% for comment in user_data.comment_users.all %}
+        <div class="card">
+            <div class="card-body">
+                <p class="cared-text">{{comment.movie_id.title}} - {{ comment.content }}</p>
+            </div>
+        </div>
+    {% endfor %}
+
+    <h2>{{ user_data.username }}'s 좋아요한 게시글</h2>
+    {% for movie in user_data.like_users.all %}
+        <div class="card">
+            <div class="card-body">
+                <p class="cared-text">{{ movie.title }}</p>
+            </div>
+        </div>
+    {% endfor %}
+
+  <a href="{% url 'movies:index' %}" class="btn btn-dark">back</a>
+
+{% endblock base %}
+
+
+
+

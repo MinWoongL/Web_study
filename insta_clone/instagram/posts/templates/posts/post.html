@@ -1,7 +1,14 @@
-{% extends 'base.html' %}
 
-{% block content %}
-<h1>메인 화면</h1>
+{% for post in posts %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <p class="card-text">{{ post.content }}</p>
+      <form action="{% url "posts:delete" post.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger mt-1" value="DELETE">
+      </form>
+    </div>
+  </div>
 
-{% endblock content %}
 
+{% endfor %}

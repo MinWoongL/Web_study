@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>This is Index</h1>
+{% if user.is_authenticated %}
+<h4><p> Hello! {{user}} </p></h4>
+<a href="{% url 'accounts:logout' %}" class='btn btn-danger'>Log out</a>
+<hr>
+{% endif %}
+<div>
+    {% include 'posts/post.html' %}
+</div>
+{% endblock content %}
+

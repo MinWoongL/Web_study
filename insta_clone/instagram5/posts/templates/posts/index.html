@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>This is Index</h1>
+{% if user.is_authenticated %}
+<h4><p> Hello! {{user}} </p></h4>
+<div class='d-flex'>
+    <a href="{% url 'accounts:logout' %}" class='btn btn-secondary'>로그 아웃</a>
+    <a href="{% url 'accounts:update' %}" class='btn btn-warning'>프로필 수정</a>
+    <a href="{% url 'accounts:change_password' %}" class='btn btn-primary'>비밀번호 변경</a>
+    <a href="{% url 'accounts:delete' %}" class='btn btn-danger'>회원 탈퇴</a>
+</div>
+
+<hr>
+{% endif %}
+<div>
+    {% include 'posts/post.html' %}
+</div>
+{% endblock content %}
+

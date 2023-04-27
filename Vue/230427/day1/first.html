@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+      <p>{{ message }}</p>
+
+      <button v-on:click="prinMessage(message)">클릭</button>
+      <p v-for="(temp, idx) in tempList">
+        {{ idx }}번 - {{ temp }}
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        // Document 를 직접 생성, 조작하는 코드는 최대한 사용 자제
+        const newDiv = document.createElement('div')
+        // newDiv.textContent = "{{ message }}"
+        document.body.appendChild(btn)
+
+        const app = new Vue({
+            el: newDiv,
+            data: {
+              message: '메세지'
+            },
+            methods: {
+              printMessage() {
+                console.log(this.message)
+              }
+            }
+          })
+    </script>
+    
+</body>
+</html>

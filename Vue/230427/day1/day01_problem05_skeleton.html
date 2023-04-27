@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>MBTI 검사기</h1>
+    <input type="text" v-model='text'>
+    <button v-on:click="pagelink">결과 보기</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        text : '',
+        allTypes : ['istj', 'isfj', 'infj', 'intj', 'istp', 'isfp', 'infp', 'intp', 'estp', 'esfp', 'enfp', 'entp', 'estj', 'esfj', 'enfj', 'entj']
+      },
+      methods: {
+        pagelink: function (event) {
+          const type = this.text.toLowerCase()
+          if (this.allTypes.includes(type)) {
+            // 현재창변경
+            location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${type}`
+            // 새창열기
+            // window.open(`https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${type}`)
+          } else {
+            alert('해당 mbti는 없는 유형입니다.')
+          }
+        }
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .checked_decoration {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <div id="app">
+        <div>
+            <input type="text" v-model="word">
+            <button @click="plusTodoList()">+</button>
+        </div>
+        <div>
+            <ul>
+                <li v-for="item in items" :class="{ checked_decoration: item.isChecked }">
+                    <input type="checkbox" v-model="item.isChecked"> {{ item.text }}
+                </li>
+            </ul>
+        </div>
+        <button @click="deleteChecked">완료 목록 삭제</button>
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                word: '',
+                items: localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [],
+            },
+            methods: {
+                plusTodoList() {
+                    if(this.word) {
+                        this.items.push({
+                            text: this.word,
+                            // 따로 배열을 만들기 보단 속성을 추가하여 판단
+                            isChecked: false
+                        })
+                    } else {
+                        alert('내용을 입력해 주세요')
+                    }
+                    // 로컬스토리지 영역에 this.items를 저장
+                    // [참고] 로컬스토리지에는 문자열만 저장할 수 있음
+                    localStorage.setItem('items', JSON.stringify(this.items))
+                },
+                deleteChecked() {
+                    this.items = this.items.filter((element) => {
+                        return element.isChecked === false
+                    })
+                    localStorage.setItem('items', JSON.stringify(this.items))
+                }
+            }
+        })
+
+    </script>
+    
+</body>
+</html>

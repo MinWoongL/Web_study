@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: rgb(38, 38, 38);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #50B8E7;
+    }
+
+    .buttonArea {
+      margin: 0 auto;
+      width: 80%;
+    }
+
+    .buttonRow {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      height: 80px;
+    }
+
+    .btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 45%;
+      border: 1px solid #50B8E7;
+      cursor: pointer;
+    }
+
+    .clear {
+      margin-top: 10px;
+      outline: none;
+      background: none;
+      border: 1px solid #50B8E7;
+      width: 100px;
+      height: 50px;
+      cursor: pointer;
+      font-size: large;
+    }
+
+    .clear:hover {
+      background-color: #B9E2F5;
+    }
+
+    .type {
+      font-size: x-large;
+      font-weight: bold;
+    }
+
+    .selected {
+      background-color: #B9E2F5;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <h1>버튼 클릭하기</h1>
+      <section class="buttonArea">
+        <div v-for="(item, index) in isSelected">
+          <div class="buttonRow" >
+            <div class="btn" :class="{ selected: isSelected[index] }" @click="select(index)">
+              <span clas="type">{{ index + 1 }}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <button class="clear" @click="check_cancle()">전체 해제</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        isSelected: [false, false, false, false]
+      },
+      methods: {
+        select: function(idx) {
+          // 객체 내부 데이터 값은 바뀌지만, 화면 반영이 안된다!!
+          // 배열 인덱스로 접근해서 데이터를 변경
+          // Vue가 변경을 감지하지 못함
+          // this.isSelected[idx] = !this.isSelected[idx]
+          // console.log(this.isSelected)
+          this.$set(this.isSelected, idx, !this.isSelected[idx])
+          // 해결방법2. 새로운 배열로 교체하기
+          // const newArr = [...this.isSelected]
+          // newArr[idx] = !newArr[idx]
+          // this.isSelected = newArr
+        },
+        check_cancle: function() {
+          for (let i = 0; i < this.isSelected.length; i++) {
+            this.$set(this.isSelected, i, false)
+          }
+        }
+      }
+    })
+  </script>
+</body>
+</html>

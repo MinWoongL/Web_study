@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <!-- key 를 주지 않으면, v-for 내부의 요소가 for 문에 제대로 포함되지 않음 -->
+      <!-- 아래 코드는 input 태그가 렌더링 시 특정 for 문에 포함되지 않고 그냥 화면에 출력 -->
+      <!-- key 값에는 유일한 값을 넣어야함 -->
+      <!-- 최대한 인덱스로는 사용하지 말 것 -->
+      <li 
+        v-for="item of items"
+        :key="item"
+        >
+        {{ item }} : <input type="number">
+      </li>
+    </ul>
+    <button @click="shift">shift</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        items: ['apple', 'banana', 'orange']
+      },
+      methods: {
+        shift() {
+          this.items.push(this.items.shift())
+        }
+      }
+    })
+  </script>
+</body>
+</html>
